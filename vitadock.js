@@ -101,10 +101,10 @@ Module.register("vitadock",{
 					display: false
 				},
 				tooltips: {
-					mode: "x",
+					mode: "index",
 					callbacks: {
 						title: function(ti, data) {
-							return moment(ti[0].xLabel).format("MMM \'YY");
+							return moment(ti[0].xLabel).format("DD MMM 'YY");
 						},
 						label: function(ti, data) {
 							if (ti.datasetIndex == 0) {
@@ -128,14 +128,19 @@ Module.register("vitadock",{
 					xAxes: [{
 						type: "time",
 						time: {
-							unit: "month",
-							//unit: "quarter",
-							displayFormats: {
-								month: "MMM \'YY"
-							},
+							unit: "day",
 						},
 						gridLines: {
 							color: "rgba(255, 255, 255, 0.1)"
+						},
+						ticks: {
+							callback: function(val, idx, values) {
+								if(values[idx].date() == 1) {
+									return values[idx].format("MMM'YY");
+								} else {
+									return null;
+								}
+							}
 						}
 					}],
 					yAxes: [{
