@@ -1,0 +1,11 @@
+{
+  "name": "mmm-vitadock",
+  "version": "0.0.1",
+  "description": "Medisana Vitadock plugin for MagicMirror²",
+  "main": "vitadock.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Chris van Marle",
+  "license": "MIT"
+}
