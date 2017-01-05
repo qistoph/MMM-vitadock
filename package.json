@@ -4,7 +4,8 @@
   "description": "Medisana Vitadock plugin for MagicMirror²",
   "main": "vitadock.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "postinstall": "node authenticate.js"
   },
   "author": "Chris van Marle",
   "license": "MIT"
