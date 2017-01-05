@@ -1,4 +1,4 @@
-/* global Module */
+/* global Module, Chart, moment */
 
 /* Magic Mirror
  * Module: vitadock
@@ -66,8 +66,8 @@ Module.register("vitadock",{
 		var wrapper = document.createElement("div");
 
 		if(!this.hasCreds) {
-			wrapper.innerHTML = 'Configure Vitadock credentials!';
-			wrapper.className = 'small';
+			wrapper.innerHTML = "Configure Vitadock credentials!";
+			wrapper.className = "small";
 			return wrapper;
 		}
 
