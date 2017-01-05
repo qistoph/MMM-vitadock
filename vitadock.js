@@ -14,7 +14,7 @@ Module.register("vitadock",{
 	},
 
 	getScripts: function() {
-		return ["moment.js", "Chart.js"];
+		return ["moment.js", this.file("node_modules/chart.js/dist/Chart.min.js")];
 	},
 
 	start: function() {
