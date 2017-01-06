@@ -1,4 +1,4 @@
-/* global Module */
+/* global Module, Chart, moment */
 
 /* Magic Mirror
  * Module: vitadock
@@ -14,7 +14,7 @@ Module.register("vitadock",{
 	},
 
 	getScripts: function() {
-		return ["moment.js", "Chart.js"];
+		return ["moment.js", this.file("node_modules/chart.js/dist/Chart.min.js")];
 	},
 
 	start: function() {
@@ -66,8 +66,8 @@ Module.register("vitadock",{
 		var wrapper = document.createElement("div");
 
 		if(!this.hasCreds) {
-			wrapper.innerHTML = 'Configure Vitadock credentials!';
-			wrapper.className = 'small';
+			wrapper.innerHTML = "Configure Vitadock credentials!";
+			wrapper.className = "small";
 			return wrapper;
 		}
 

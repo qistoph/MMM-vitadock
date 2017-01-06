@@ -4,9 +4,24 @@
   "description": "Medisana Vitadock plugin for MagicMirror²",
   "main": "vitadock.js",
   "scripts": {
-    "test": "npm test",
+    "test": "grunt",
     "postinstall": "node authenticate.js"
   },
+  "pre-commit": [
+    "test"
+  ],
   "author": "Chris van Marle",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^2.4.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-eslint": "^19.0.0",
+    "grunt-jsonlint": "^1.1.0",
+    "grunt-markdownlint": "^1.0.21",
+    "grunt-stylelint": "^0.6.0",
+    "pre-commit": "^1.2.2",
+    "time-grunt": "^1.4.0"
+  }
 }
