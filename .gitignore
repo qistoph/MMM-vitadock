@@ -1,0 +1,4 @@
+node_modules/
+creds*.json
+deviceCreds*.json
+.*.swp

@@ -13,7 +13,8 @@
   "author": "Chris van Marle",
   "license": "MIT",
   "dependencies": {
-    "chart.js": "^2.4.0"
+    "chart.js": "^2.4.0",
+    "promise": "^7.1.1"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
