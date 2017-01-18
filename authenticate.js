@@ -25,7 +25,7 @@ const rl = readline.createInterface({
 
 new Promise(function(fulfill, reject) {
 	if(fs.existsSync(deviceCreds)) {
-		var state = JSON.parse(fs.readFileSync(deviceCreds, 'utf8'));
+		var state = JSON.parse(fs.readFileSync(deviceCreds, "utf8"));
 		console.log("Device credentials are read from " + deviceCreds + ".");
 		fulfill(state);
 	} else {
@@ -79,8 +79,7 @@ new Promise(function(fulfill, reject) {
 
 					fs.writeFile(
 							credsFile,
-							JSON.stringify(state, null, "\t"),
-							{
+							JSON.stringify(state, null, "\t"), {
 								encoding: "utf-8",
 								mode: 0o400,
 								flag: "wx"
