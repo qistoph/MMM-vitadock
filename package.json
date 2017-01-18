@@ -5,10 +5,11 @@
   "main": "vitadock.js",
   "scripts": {
     "test": "grunt",
+    "precommit": "grunt precommit",
     "postinstall": "node authenticate.js"
   },
   "pre-commit": [
-    "test"
+    "precommit"
   ],
   "author": "Chris van Marle",
   "license": "MIT",
