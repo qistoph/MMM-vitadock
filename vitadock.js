@@ -72,6 +72,8 @@ Module.register("vitadock",{
 		}
 
 		this.ctx = document.createElement("canvas");
+		this.ctx.style.width = "300px";
+		this.ctx.style.height = "200px";
 		wrapper.appendChild(this.ctx);
 
 		this.myChart = new Chart(this.ctx, {
