@@ -11,6 +11,7 @@ Module.register("vitadock",{
 
 	// Default module config.
 	defaults: {
+		timespan: 365/2, // half a year in days
 	},
 
 	getScripts: function() {

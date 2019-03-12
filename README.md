@@ -27,6 +27,7 @@ modules: [
     position: 'top_right',
     header: 'Weight/Fat',
     config: {
+	  timespan: 185, // days
       credentials: {
         deviceToken: 'REPLACE WITH YOUR CREDENTIALS',
         deviceSecret: 'REPLACE WITH YOUR CREDENTIALS',

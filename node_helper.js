@@ -30,8 +30,9 @@ module.exports = NodeHelper.create({
 
 	createFetcher: function(config) {
 		var self = this;
+		var params = {start: 1, max: 100, date_since: new Date() - (config.timespan * 24*60*60*1000)};
 
-		Vitadock.getData(config.credentials, "targetscales", function(success, data) {
+		Vitadock.getData("targetscales", params, config.credentials, function(success, data) {
 			if(!success) {
 				console.log("Unable to retrieve Vitadock targetscales data: ", data);
 				return;
