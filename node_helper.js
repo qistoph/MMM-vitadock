@@ -11,7 +11,7 @@ module.exports = NodeHelper.create({
 	socketNotificationReceived: function(notification, payload) {
 		//console.log("Notification received: " + notification);
 		if (notification === "ADD_VITADOCK") {
-			//console.log("ADD_STATION: ");
+			//console.log("ADD_VITADOCK: ");
 			this.createFetcher(payload); // payload = config
 		}
 	},
@@ -38,6 +38,7 @@ module.exports = NodeHelper.create({
 			}
 
 			data = data.sort(self.sortByMeasurementDate);
+			//console.log("VITADOCK_TARGETSCALES");
 			self.sendSocketNotification("VITADOCK_TARGETSCALES", {
 				id: config.credentials.oauthToken,
 				data: data,

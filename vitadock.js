@@ -31,6 +31,7 @@ Module.register("vitadock",{
 	},
 
 	socketNotificationReceived: function(notification, payload) {
+		//console.log("vitadock, socketNotificationReceived:", notification, payload);
 		if (notification === "VITADOCK_TARGETSCALES") {
 			if (payload.id === this.config.credentials.oauthToken) {
 				var labels = [];
@@ -106,7 +107,7 @@ Module.register("vitadock",{
 					mode: "index",
 					callbacks: {
 						title: function(ti, data) {
-							return moment(ti[0].xLabel).format("DD MMM 'YY");
+							return moment(this._data.labels[ti[0].index]).format("DD MMM 'YY");
 						},
 						label: function(ti, data) {
 							if (ti.datasetIndex == 0) {
@@ -137,7 +138,7 @@ Module.register("vitadock",{
 						},
 						ticks: {
 							callback: function(val, idx, values) {
-								if(values[idx].date() == 1) {
+								if(values[idx] && values[idx].date && values[idx].date() == 1) {
 									return values[idx].format("MMM'YY");
 								} else {
 									return null;
