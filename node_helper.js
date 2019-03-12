@@ -33,7 +33,7 @@ module.exports = NodeHelper.create({
 
 		Vitadock.getData(config.credentials, "targetscales", function(success, data) {
 			if(!success) {
-				console.log("Unable to retrieve Vitadock targetscales data: " + data);
+				console.log("Unable to retrieve Vitadock targetscales data: ", data);
 				return;
 			}
 
